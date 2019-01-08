@@ -63,7 +63,8 @@ p2 = buckets.pool(s2==buckets.width);
 
 net.layers(22).block.poolSize=[1 p1];
 net.layers(47).block.poolSize=[1 p2];
-featid = structfind(net.vars,'name','distance');
+%featid = structfind(net.vars,'name','distance');
+featid = strcmp({net.vars.name},'distance');
 net.eval({ 'input_b1', gpuArray(inp1) ,'input_b2', gpuArray(inp2) });
 dist = gather(squeeze(net.vars(featid).value));
 

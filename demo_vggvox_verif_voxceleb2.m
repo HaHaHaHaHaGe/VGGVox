@@ -11,8 +11,9 @@ opts.dataDir = 'testfiles/verif';
 opts = vl_argparse(opts, varargin) ;
 
 % Example speech segments for input
-inpPath1 = fullfile(opts.dataDir, '8jEAjG6SegY_0000008.wav');
-inpPath2 = fullfile(opts.dataDir, 'x6uYqmx31kE_0000001.wav'); 
+inpPath1 = fullfile(opts.dataDir, 'test.wav');
+inpPath2 = fullfile(opts.dataDir, 'test2.wav'); 
+
 
 % Load or download the VGGVox model for Verification pretrained on VoxCeleb2
 modelName = 'ver_net.mat' ;

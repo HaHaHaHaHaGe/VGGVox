@@ -30,6 +30,7 @@ if isempty(ok)
 else
     opts.modelPath = paths{ok} ;
 end
+fprintf('%s\n',opts.modelPath)
 tmp = load(opts.modelPath); net = tmp.net ;
 
 buckets.pool 	= [2 5 8 11 14 17 20 23 27 30];
